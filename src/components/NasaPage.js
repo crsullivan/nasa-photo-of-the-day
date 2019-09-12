@@ -1,7 +1,11 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import {NasaCard} from "./NasaCard";
+import {NasaHeader} from "./NasaHeader";
+import styled from "styled-components";
 
+
+// .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
 
 
 export default function NasaPage() {
@@ -9,7 +13,8 @@ export default function NasaPage() {
     
     useEffect(() => {
         axios
-        .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
+        .get(`https://api.nasa.gov/planetary/apod?api_key=NNKOjkoul8n1CH18TWA9gwngW1s1SmjESPjNoUFo
+        `)
         .then(response => {
             const bodies = response.data;
             setBodies([bodies]);
@@ -20,17 +25,25 @@ export default function NasaPage() {
         });
     },[]);
     return ( 
+        
 
+        
         <div className="containers">
             {bodies.map(el => {
                 return (
+                    <React.Fragment>
+                    <NasaHeader
+                    date={el.date}
+                    />
                     <NasaCard
                     key={el.copyright}
                     hdUrl={el.hdurl}
                     title={el.title}
                     explanation={el.explanation}
-                    date={el.date}
+                  
+
                     />
+                    </React.Fragment>
                 )
             })}
         </div>
