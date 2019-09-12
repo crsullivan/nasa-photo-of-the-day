@@ -11,7 +11,7 @@ background:lightgreen;
 
 `
 const TopHead = styled.div `
-color:white;
+color:#DCDCDC;
 
 
 `

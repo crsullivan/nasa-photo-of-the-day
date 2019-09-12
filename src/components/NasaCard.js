@@ -4,9 +4,10 @@ import styled from "styled-components";
 const Container = styled.div `
 display:flex;
 justify-content:space-around;
-color:white;
+color:#DCDCDC;
 background:#0C1B33;
 margin-top:-1.2%
+height:700px;
 `
 
 const HdUrl = styled.img `
@@ -18,7 +19,7 @@ const Content = styled.div `
 text-align:center;
 width:40%;
 margin-right:5%;
-margin-top:6%;
+margin-top:8.2%;
 `
 
 const Text = styled.p `
