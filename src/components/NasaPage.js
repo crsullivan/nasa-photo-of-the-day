@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import {NasaCard} from "./NasaCard";
 import {NasaHeader} from "./NasaHeader";
-import styled from "styled-components";
+import {NasaFooter} from "./NasaFooter";
 
 
 // .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
@@ -40,8 +40,10 @@ export default function NasaPage() {
                     hdUrl={el.hdurl}
                     title={el.title}
                     explanation={el.explanation}
-                  
-
+                    date={el.date}
+                    />
+                    <NasaFooter
+                    copyright={el.copyright}
                     />
                     </React.Fragment>
                 )
